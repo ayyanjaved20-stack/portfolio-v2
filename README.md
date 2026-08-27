@@ -1,116 +1,317 @@
-# AYYAN.JAVED — **SYSTEM**
+# AYYAN.JAVED — PORTFOLIO V2
 
-> Personal website of Ayyan Javed.
-> Software engineer, creative developer.
-> I build digital systems that feel good to use.
-
-A minimalist, editorial portfolio — a personal system: dark-and-light themed, kinetic, and deliberate. Built as a single-page document that reads from `SYSTEM ONLINE` to `END OF DOCUMENT`.
-
-**Live site →** [portfolio-ruby-ten-66.vercel.app](https://portfolio-ruby-ten-66.vercel.app/)
+> A minimalist, editorial personal portfolio built from scratch with Next.js and TypeScript.
 
 ---
 
-## 01 · System Specification
+<p align="center">
+  <img src="./preview.png" alt="AYYAN.JAVED Portfolio Preview" width="720" />
+</p>
 
-| Field | Value |
-| --- | --- |
-| STATUS | OPERATIONAL |
-| VERSION | 2026.1 |
-| LOCATION | ISLAMABAD / PK |
-| FRAMEWORK | Next.js 16 (App Router) |
-| LANGUAGE | TypeScript |
-| STYLING | Tailwind CSS |
-| MOTION | GSAP + ScrollTrigger, Lenis smooth scroll |
-| FONTS | Space Grotesk / JetBrains Mono |
-| HOSTING | Vercel |
+<p align="center">
+  <a href="https://portfolio-ruby-ten-66.vercel.app/">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDAiIGhlaWdodD0iNTQiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHJ4PSIxMiIgZmlsbD0iIzBEMEQwRCIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iSGVsdmV0aWNhLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC13ZWlnaHQ9IjUwMCIgbGV0dGVyLXNwYWNpbmc9IjJweCIgZmlsbD0iI0ZGRkZGRiI+44CQIFZJRVcgTElWRSBTSVRFIOOAkTwvdGV4dD48L3N2Zz4=" alt="View Live Site" width="240" />
+  </a>
+</p>
 
 ---
 
-## 02 · The Stack
+## 01 · PROJECT
 
-- **Next.js 16** — App Router, static generation, route-level optimization
-- **TypeScript** — strict, typed end-to-end
-- **Tailwind CSS** — utility-first styling driven by CSS variables, so the theme flips without a flash
-- **GSAP + ScrollTrigger** — scroll-scrubbed reveals, line-growth dividers
-- **Lenis** — buttery inertial scrolling
-- **System theme** — light/dark with an inline blocking script that applies the saved theme before first paint
+**AYYAN.JAVED** is my personal developer portfolio — designed to present my work, background, and contact information through a deliberately minimal interface.
 
----
+Rather than using a conventional portfolio layout, the site treats the entire page as a **single interactive document**.
 
-## 03 · Selected Work
+The design combines editorial typography with a subtle technical/terminal aesthetic:
 
-The projects are divided into two tiers — **SELECTED WORK** and **EXPERIMENTS** — so the hierarchy reads instantly.
+* Structured numbered sections
+* Monospace system metadata
+* Editorial typography
+* Light / dark themes
+* Scroll-based motion
+* Minimal UI
+* Subtle grain texture
+* Strong spacing and typography hierarchy
 
-| Nº | Project | Type | Status |
-| --- | --- | --- | --- |
-| 001 | **AYYANFLIX** | Full stack app | Deployed |
-| 002 | **Abdul Salam Jewellers** | E-commerce store | Completed |
-| 003 | **Anchorage Phase 2** | Production website | Delivered |
-| 004 | **Heavy Racing** | 2D arcade game | Complete |
-| 005 | Ride-Hailing DBMS | Database design | Academic |
-| 006 | Huffman Encoding | Algorithms | Academic |
+The goal was to make the interface feel **designed without feeling over-designed**.
 
 ---
 
-## 04 · Getting Started
+## 02 · TECHNICAL SPECIFICATION
+
+| FIELD         | VALUE                          |
+| ------------- | ------------------------------ |
+| FRAMEWORK     | Next.js 16                     |
+| ARCHITECTURE  | App Router                     |
+| LANGUAGE      | TypeScript                     |
+| STYLING       | Tailwind CSS                   |
+| ANIMATION     | GSAP + ScrollTrigger           |
+| SMOOTH SCROLL | Lenis                          |
+| FONT          | Space Grotesk / JetBrains Mono |
+| DEPLOYMENT    | Vercel                         |
+| TYPE          | Single-page application        |
+
+---
+
+## 03 · FEATURES
+
+### THEME SYSTEM
+
+The portfolio supports both light and dark themes.
+
+Theme preference is stored locally and applied before the page renders, preventing the typical light/dark theme flash during page load.
+
+### MOTION
+
+GSAP and ScrollTrigger handle the site's scroll-driven interactions.
+
+Motion is intentionally restrained — primarily used for:
+
+* Section reveals
+* Divider animations
+* Scroll-linked transitions
+* Element entrances
+* Micro-interactions
+
+Lenis provides smooth inertial scrolling across the page.
+
+### RESPONSIVE DESIGN
+
+The layout adapts across:
+
+```text
+MOBILE
+   ↓
+TABLET
+   ↓
+DESKTOP
+```
+
+Typography, spacing, grids, navigation, and project layouts adjust depending on viewport size.
+
+### DOCUMENT-STYLE NAVIGATION
+
+Instead of treating every section as an isolated card, the page flows continuously like a document.
+
+This creates a stronger relationship between:
+
+```text
+INTRO
+  ↓
+WORK
+  ↓
+PROFILE
+  ↓
+CONTACT
+  ↓
+SYSTEM
+```
+
+---
+
+## 04 · DESIGN DIRECTION
+
+The visual language was inspired by **editorial design systems, technical documentation, and modern software interfaces**.
+
+The interface intentionally avoids:
+
+* Excessive gradients
+* Large decorative illustrations
+* Skill percentage bars
+* Generic glassmorphism
+* Excessive cards
+* Animation without purpose
+
+Instead, the design relies on:
+
+**TYPOGRAPHY**
+
+Large display type paired with a monospace technical layer.
+
+**GRID**
+
+Consistent alignment and spacing create the structure of the page.
+
+**CONTRAST**
+
+The light and dark themes use the same underlying design system rather than being treated as separate designs.
+
+**MOTION**
+
+Animation supports hierarchy and interaction rather than competing with the content.
+
+**TEXTURE**
+
+A very subtle grain layer prevents the interface from feeling completely flat.
+
+---
+
+## 05 · PROJECT ARCHITECTURE
+
+```text
+src/
+│
+└── app/
+    │
+    ├── components/
+    │   ├── ...
+    │
+    ├── layout.tsx
+    ├── page.tsx
+    ├── globals.css
+    ├── ThemeProvider.tsx
+    └── ThemeToggle.tsx
+```
+
+### `page.tsx`
+
+Contains the primary single-page portfolio structure and section composition.
+
+### `components/`
+
+Reusable interface components used throughout the portfolio.
+
+### `globals.css`
+
+Contains global styling, design tokens, theme variables, typography, grain effects, and shared styles.
+
+### `ThemeProvider.tsx`
+
+Controls the application's light/dark theme state while remaining safe during Next.js hydration.
+
+### `ThemeToggle.tsx`
+
+Provides the interface for switching between themes.
+
+---
+
+## 06 · PERFORMANCE
+
+Performance was treated as part of the design rather than something added after development.
+
+The project avoids unnecessary dependencies and server-side infrastructure.
+
+```text
+NO DATABASE
+NO API
+NO CMS
+NO BACKEND
+NO ENVIRONMENT VARIABLES
+```
+
+The portfolio is primarily static and can therefore be efficiently built and deployed through Next.js and Vercel.
+
+Client-side JavaScript is mainly used where it provides actual interaction:
+
+```text
+THEME
+MOTION
+SCROLL
+INTERACTION
+```
+
+---
+
+## 07 · DEVELOPMENT
+
+### REQUIREMENTS
+
+```text
+Node.js
+npm
+Git
+```
+
+### INSTALL
 
 ```bash
 npm install
+```
+
+### DEVELOPMENT
+
+```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Then open:
 
-| Command | Action |
-| --- | --- |
-| `npm run dev` | Start the development server |
-| `npm run build` | Create an optimized production build |
-| `npm run start` | Start the production server |
-| `npm run lint` | Run ESLint |
-
----
-
-## 05 · Project Structure
-
-```
-src/
-├── app/
-│   ├── components/
-│   ├── layout.tsx     # Root layout, metadata, inline theme script
-│   ├── page.tsx       # Single-page document (hero → work → profile → contact → system)
-│   ├── globals.css    # Design tokens, theme variables, components
-│   ├── ThemeProvider.tsx  # Hydration-safe theme context
-│   └── ThemeToggle.tsx    # Light/dark toggle
-├── public/
-│   └── favicon.png    # Favicon
+```text
+http://localhost:3000
 ```
 
----
-
-## 06 · Theming
-
-The site ships with a system theme that respects the user's saved preference — or their OS default — with **zero flash on reload**.
-
-An inline blocking script (`layout.tsx`) sets `data-theme` on `<html>` before first paint, and `ThemeProvider` reads that same state to keep the context in sync.
-
-```
-Grain overlay  → 0.03 opacity film texture
-Accent         → #FF3B30 light / #FF453A dark
-Type           → Space Grotesk for display, JetBrains Mono for meta
-```
-
----
-
-## 07 · Deploy
-
-Production-ready for Vercel — static, no server dependencies, no environment variables required.
+### PRODUCTION BUILD
 
 ```bash
+npm run build
+```
+
+### PRODUCTION SERVER
+
+```bash
+npm run start
+```
+
+### LINT
+
+```bash
+npm run lint
+```
+
+---
+
+## 08 · DEPLOYMENT
+
+The project is deployed through **Vercel**.
+
+Production deployment is generated from the main branch.
+
+```bash
+git add .
+git commit -m "update portfolio"
 git push origin main
 ```
 
-Vercel auto-detects Next.js and handles the rest.
+Vercel automatically builds and deploys the project.
 
 ---
 
-**END OF DOCUMENT** — Copyright © 2026 Ayyan Javed. All rights reserved.
+## 09 · PROJECT GOALS
+
+This project was built to explore how much personality can be created through **typography, spacing, motion, and structure** without relying on a complicated visual system.
+
+The main goals were:
+
+```text
+01  BUILD FROM SCRATCH
+02  KEEP THE INTERFACE MINIMAL
+03  MAKE MOTION PURPOSEFUL
+04  SUPPORT LIGHT + DARK THEMES
+05  KEEP THE SITE FAST
+06  PRESENT PROJECTS CLEARLY
+07  MAKE THE INTERFACE FEEL DISTINCTIVE
+```
+
+---
+
+## 10 · STATUS
+
+```text
+PROJECT       AYYAN.JAVED
+VERSION       1.0
+STATUS        OPERATIONAL
+FRAMEWORK     NEXT.JS
+DEPLOYMENT    VERCEL
+```
+
+### Links
+
+**Live Site →** https://portfolio-ruby-ten-66.vercel.app/
+
+**GitHub →** https://github.com/ayyanjaved20-stack/portfolio-v2
+
+---
+
+**END OF README**
+
+*Built by Ayyan Javed · 2026*

@@ -1,0 +1,202 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #F4F3EF;
+  --bg-subtle: #EBEAE5;
+  --text: #111111;
+  --text-secondary: #777777;
+  --border: #D6D4CE;
+  --accent: #FF3B30;
+}
+
+[data-theme="dark"] {
+  --bg: #0A0A0A;
+  --bg-subtle: #141414;
+  --text: #EDEDED;
+  --text-secondary: #888888;
+  --border: #2A2A2A;
+  --accent: #FF453A;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-space-grotesk), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+::selection {
+  background-color: var(--accent);
+  color: #ffffff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ── Grain overlay ── */
+.grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 180px;
+}
+
+[data-theme="dark"] .grain::before {
+  opacity: 0.06;
+}
+
+/* ── Border rule ── */
+.border-rule {
+  border-top: 1px solid var(--border);
+  transition: border-color 0.4s ease;
+}
+
+/* ── Accent underline ── */
+.accent-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.accent-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--accent);
+  transition: width 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.accent-underline:hover::after {
+  width: 100%;
+}
+
+/* ── Project row ── */
+.project-row {
+  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1),
+    background-color 0.3s ease;
+}
+
+.project-row:hover {
+  transform: translateX(4px);
+}
+
+/* ── Status badge ── */
+.status-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid var(--border);
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.status-badge:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.status-badge.deployed {
+  border-color: var(--accent);
+  color: var(--accent);
+  background-color: rgba(255, 59, 48, 0.06);
+}
+
+[data-theme="dark"] .status-badge.deployed {
+  background-color: rgba(255, 69, 58, 0.1);
+}
+
+/* ── Theme toggle ── */
+.theme-toggle {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.5rem;
+  z-index: 100;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  transition: border-color 0.3s ease, background-color 0.3s ease,
+    color 0.3s ease, transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: rotate(30deg);
+}
+
+/* ── CTA button ── */
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border: 1px solid var(--border);
+  font-family: var(--font-jetbrains-mono), ui-monospace, monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color 0.3s ease, color 0.3s ease,
+    background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background-color: rgba(255, 59, 48, 0.04);
+  transform: translateY(-1px);
+}
+
+[data-theme="dark"] .cta-button:hover {
+  background-color: rgba(255, 69, 58, 0.08);
+}
+
+/* ── Hobby pill ── */
+.hobby-pill {
+  display: inline-block;
+  padding: 4px 12px;
+  border: 1px solid var(--border);
+  font-size: 0.75rem;
+  border-radius: 100px;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.hobby-pill:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
